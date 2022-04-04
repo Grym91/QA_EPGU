@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 url = "https://pgu-uat-fed.test.gosuslugi.ru/600316/1/form"
 driver.get(url)
 
-driver.implicitly_wait(10)
+driver.implicitly_wait(3)
 
 element = driver.find_element(By.ID, 'login')
 element.send_keys('000-729-729 38')
@@ -24,7 +24,7 @@ time.sleep(3)
 userButton = driver.find_element(By.CLASS_NAME, '-ms-row-lg-1')
 userButton.click()
 
-time.sleep(3)
+time.sleep(100)
 
 userStart = driver.find_element(By.CLASS_NAME, 'button')
 userStart.click()
